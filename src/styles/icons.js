@@ -17,7 +17,7 @@ const VerticalSeparator = glamorous.span({
   position: 'absolute',
   top: 10,
   left: '50%',
-  backgroundColor: '#fff'
+  backgroundColor: '#eee'
 });
 
 export {UserIcon, VerticalSeparator};

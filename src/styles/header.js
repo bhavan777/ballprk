@@ -24,6 +24,11 @@ const HeaderList = glamorous.ul({
   fontFamily: `'Oswald', sans-serif`,
   listStyle: 'none',
   float: 'right',
+  color: '#ddd',
+  fontWeight: 300,
+  letterSpacing: 1.5,
+  fontSize: '1.15rem',
+  marginRight: 15,
   ' li': {
     float: 'left',
     textAlign: 'center',
@@ -40,6 +45,10 @@ const HeaderList = glamorous.ul({
     margin: '0 20px',
     ':first-child': {
       marginLeft: 0
+    },
+    '.active': {
+      color: '#fff',
+      fontWeight: 300
     }
   }
 });

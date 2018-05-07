@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
 import './App.css';
 import Header from './components/header';
+import Explore from './components/explore'
 class App extends Component {
   render () {
     return (
-      <Header />
+      <div>
+        <Header />
+        <Explore />
+        {/* <Header container={true} />
+        <Explore container={true} /> */}
+      </div>
     );
   }
 }

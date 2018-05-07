@@ -10,7 +10,7 @@ class HeaderActions extends Component {
           <a>NewsFeed</a>
         </li>
         <li>
-          <a>Explore</a>
+          <a className='active'>Explore</a>
         </li>
         <li>
           <i className='fas fa-barcode' />

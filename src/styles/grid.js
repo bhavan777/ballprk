@@ -1,25 +1,43 @@
 import glamorous from 'glamorous';
 import {Config} from './config';
 
-const Container = glamorous.div({
-  margin: '0 auto',
-  maxWidth: 1280,
-  width: '100%',
-  '::after': {
-    content: '""',
-    clear: 'both',
-    display: 'table'
-  }
-});
-
-const Col = glamorous.div((props) => {
-  let sSize = Number(props.s) || Config.gridSize;
-  let sWidth = (sSize / Config.gridSize) * 100 + '%';
+const Row = glamorous.div((props) => {
   return ({
-    float: props.align,
-    [Config.media.phone]: {
-      width: sWidth
+    margin: props.type === 'container' ? '0 auto' : '',
+    maxWidth: props.type === 'container' ?  1280 : 'auto',
+    width: props.type === 'container' ? '100%' : 'auto',  
+    '::after': {
+      content: '""',
+      clear: 'both',
+      display: 'table'
     }
   });
 });
-export { Container, Col };
+
+const Col = glamorous.div((props) => {
+  props.s = (props.s) ? props.s : Config.gridSize;
+  props.m = (props.m) ? props.m : props.s;
+  props.l = (props.l) ? props.l : props.m;
+  props.offsetS = (props.offsetS) ? props.offsetS : 0;
+  props.offsetM = (props.offsetM) ? props.offsetM : props.offsetS;
+  props.offsetL = (props.offsetL) ? props.offsetL : props.offsetM;
+  let tAlign = props.TAlign || 'left'
+  return ({
+    textAlign: tAlign,
+    float: 'left',
+    [Config.media.phone]: {
+      width: props.s ? 100 / (Config.gridSize / props.s) + '%' : '100%',
+      marginLeft: props.offsetS ? 100 / (Config.gridSize / props.offsetS) + '%' : '0'
+    },
+    [Config.media.tab]: {
+      width: props.m ? 100 / (Config.gridSize / props.m) + '%' : '100%',
+      marginLeft: props.offsetM ? 100 / (Config.gridSize / props.offsetM) + '%' : '0'
+    },
+    [Config.media.screen]: {
+      width: props.l ? 100 / (Config.gridSize / props.l) + '%' : '100%',
+      marginLeft: props.offsetL ? 100 / (Config.gridSize / props.offsetL) + '%' : '0'
+    }
+  });
+});
+
+export { Col, Row };
