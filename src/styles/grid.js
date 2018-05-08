@@ -3,9 +3,10 @@ import {Config} from './config';
 
 const Row = glamorous.div((props) => {
   return ({
-    margin: props.type === 'container' ? '0 auto' : '',
-    maxWidth: props.type === 'container' ?  1280 : 'auto',
-    width: props.type === 'container' ? '100%' : 'auto',  
+    margin: props.type === 'container' ? '0 auto' : '0',
+    maxWidth: props.type === 'container' ? 1280 : 'none',
+    width: props.type === 'container' ? '100%' : 'auto',
+    position: props.relative === true ? 'relative' : 'static',
     '::after': {
       content: '""',
       clear: 'both',
@@ -21,7 +22,7 @@ const Col = glamorous.div((props) => {
   props.offsetS = (props.offsetS) ? props.offsetS : 0;
   props.offsetM = (props.offsetM) ? props.offsetM : props.offsetS;
   props.offsetL = (props.offsetL) ? props.offsetL : props.offsetM;
-  let tAlign = props.TAlign || 'left'
+  let tAlign = props.TAlign || 'left';
   return ({
     textAlign: tAlign,
     float: 'left',

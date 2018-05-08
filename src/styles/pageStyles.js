@@ -8,4 +8,11 @@ const DetailsWrapper =glamorous.div({
   boxShadow: Config.shadows.light
 });
 
-export {DetailsWrapper};
+const BodyWrapper = glamorous.div({
+  height: 'calc( 100vh - 50px )',
+  width: '100%',
+  backgroundColor: '#f1f1f1',
+  overflow: 'hidden'
+});
+
+export {DetailsWrapper, BodyWrapper};

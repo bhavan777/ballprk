@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import {HeaderList} from '../styles/header';
-import {UserIcon, VerticalSeparator} from '../styles/icons';
+import {HeaderList} from '../../styles/header';
+import {UserIcon, VerticalSeparator} from '../../styles/icons';
 
 class HeaderActions extends Component {
   render () {

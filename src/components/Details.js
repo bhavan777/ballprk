@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
 import {Row, Col} from '../styles/grid';
-import Card from './card';
+import Card from './sub-components/card';
 import {Button} from '../styles/form';
 import {Space} from '../styles/helpers';
 import {DetailsWrapper} from '../styles/pageStyles';
 import {Link, Text} from '../styles/typo';
+import Data from '../data/data';
 class Details extends Component {
   render () {
     return (
       <DetailsWrapper>
-        <Card />
-        <Space ptS={50} scollable={true} maxHeight='60vh'>
+        <Card data={Data.banner} />
+        <Space ptS={50} scollable maxHeight='60vh'>
           <Row>
             <Col TAlign='center' l={8} offsetL={2}>
               <Space mbS={25}>
@@ -66,7 +67,7 @@ class Details extends Component {
                 </Space>
               </Col>
             </Row>
-          </Space>            
+          </Space>
         </Space>
       </DetailsWrapper>
     );

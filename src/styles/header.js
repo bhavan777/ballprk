@@ -24,7 +24,7 @@ const HeaderList = glamorous.ul({
   fontFamily: `'Oswald', sans-serif`,
   listStyle: 'none',
   float: 'right',
-  color: '#ddd',
+  color: '#aaa',
   fontWeight: 300,
   letterSpacing: 1.5,
   fontSize: '1.15rem',

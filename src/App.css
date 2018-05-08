@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Oswald:300,400,600|Source+Sans+Pro:200,300,400,600');
+@import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400,600|Source+Sans+Pro:200,300,400,600');
 
 html {
-  font-size: 14px;
+  font-size: 1.9vh;
   font-family: 'Source Sans Pro', sans-serif;
 }
 

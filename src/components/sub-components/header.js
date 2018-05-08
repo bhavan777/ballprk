@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import {Row, Col} from '../styles/grid';
-import {BHeader, Logo} from '../styles/header';
+import {Row, Col} from '../../styles/grid';
+import {BHeader, Logo} from '../../styles/header';
 import HeaderActions from './HeaderActions';
 class Header extends Component {
   render () {

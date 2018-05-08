@@ -1,23 +1,42 @@
 import glamorous from 'glamorous';
+import { Config } from './config';
 
-const SCard = glamorous.div({
+const SCard = glamorous.div((props) => ({
   maxWidth: '100%',
-  position: 'relative'
-});
+  position: 'relative',
+  backgroundColor: props.variant === 'smallCard' ? Config.colors.bg.white : Config.colors.bg.transparent,
+  float: props.variant === 'smallCard' ? 'left' : 'none',
+  width: props.variant === 'smallCard' ? '32%' : '100%',
+  marginRight: props.variant === 'smallCard' ? '2%' : 0,
+  marginBottom: props.variant === 'smallCard' ? '2%' : 0,
+  boxShadow: props.variant === 'smallCard' ? Config.shadows.lightBottomShadow : 'none',
+  ':nth-child(3n)': {
+    marginRight: 0
+  }
+}));
 
-const SCardImage = glamorous.img({
+const SCardImage = glamorous.div((props) => ({
+  minHeight: '25vh',
+  backgroundImage: `url(${props.bg})`,
+  backgroundRepeat: 'no-repeat',
+  backgroundSize: 'cover',
+  backgroundPosition: 'center center',
   maxWidth: '100%'
-});
+}));
 
-const SCardLogo = glamorous.img({
-  maxWidth: '100px',
+const SCardLogo = glamorous.div((props) => ({
   position: 'absolute',
   bottom: '0',
   left: '0',
   transform: 'translate(20%,40%)',
-  width: 100,
-  height: 100
-});
+  backgroundImage: `url(${props.bg})`,
+  backgroundRepeat: 'no-repeat',
+  backgroundSize: 'cover',
+  backgroundPosition: 'center center',
+  width: props.variant === 'smallCard' ? '25%' : 100,
+  height: props.variant === 'smallCard' ? '35%' : 100,
+  borderRadius: props.variant === 'smallCard' ? '50%' : 0
+}));
 
 const SCardButton = glamorous.a((props) => ({
   textDecoration: 'none',
