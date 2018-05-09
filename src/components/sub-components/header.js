@@ -7,10 +7,10 @@ class Header extends Component {
     return (
       <BHeader>
         <Row type={this.props.container ? 'container' : ''}>
-          <Col s={6} >
+          <Col s={12} m={6} TAlign='center' >
             <Logo bg={`${process.env.PUBLIC_URL}/ballprk-logo-white.png`} />
           </Col>
-          <Col s={6} >
+          <Col s={12} m={6}>
             <HeaderActions />
           </Col>
         </Row>

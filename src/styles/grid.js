@@ -28,15 +28,21 @@ const Col = glamorous.div((props) => {
     float: 'left',
     [Config.media.phone]: {
       width: props.s ? 100 / (Config.gridSize / props.s) + '%' : '100%',
-      marginLeft: props.offsetS ? 100 / (Config.gridSize / props.offsetS) + '%' : '0'
+      marginLeft: props.offsetS ? 100 / (Config.gridSize / props.offsetS) + '%' : '0',
+      paddingLeft: (props.withPadding === true) ? 5 : 0,
+      paddingRight: (props.withPadding === true) ? 5 : 0
     },
     [Config.media.tab]: {
       width: props.m ? 100 / (Config.gridSize / props.m) + '%' : '100%',
-      marginLeft: props.offsetM ? 100 / (Config.gridSize / props.offsetM) + '%' : '0'
+      marginLeft: props.offsetM ? 100 / (Config.gridSize / props.offsetM) + '%' : '0',
+      paddingLeft: (props.withPadding === true) ? 5 : 0,
+      paddingRight: (props.withPadding === true) ? 5 : 0
     },
     [Config.media.screen]: {
       width: props.l ? 100 / (Config.gridSize / props.l) + '%' : '100%',
-      marginLeft: props.offsetL ? 100 / (Config.gridSize / props.offsetL) + '%' : '0'
+      marginLeft: props.offsetL ? 100 / (Config.gridSize / props.offsetL) + '%' : '0',
+      paddingLeft: (props.withPadding === true) ? 5 : 0,
+      paddingRight: (props.withPadding === true) ? 5 : 0
     }
   });
 });

@@ -12,7 +12,7 @@ const SCard = glamorous.div((props) => ({
   boxShadow: props.variant === 'smallCard' ? Config.shadows.lightBottomShadow : 'none',
   ':nth-child(3n)': {
     marginRight: 0
-  }
+  },
 }));
 
 const SCardImage = glamorous.div((props) => ({
@@ -33,23 +33,23 @@ const SCardLogo = glamorous.div((props) => ({
   backgroundRepeat: 'no-repeat',
   backgroundSize: 'cover',
   backgroundPosition: 'center center',
-  width: props.variant === 'smallCard' ? '25%' : 100,
-  height: props.variant === 'smallCard' ? '35%' : 100,
-  borderRadius: props.variant === 'smallCard' ? '50%' : 0
+  width: props.variant === 'smallCard' ? '8vh' : 100,
+  height: props.variant === 'smallCard' ? '8vh' : 100,
+  borderRadius: props.variant === 'smallCard' ? Config.radii.circle : 0
 }));
 
 const SCardButton = glamorous.a((props) => ({
   textDecoration: 'none',
   display: 'inline-block',
-  backgroundColor: props.bg === 'primary' ? '#3B3434' : '#eee',
+  backgroundColor: props.bg === 'primary' ? Config.colors.primay : Config.colors.bg.light3,
   padding: (props.variant === 'medium') ? '5px 13px' : '8px 15px',
-  color: props.bg === 'primary' ? '#fff' : '#999',
+  color: props.bg === 'primary' ? Config.colors.text.white : Config.colors.text.light1,
   float: props.pull ? props.pull : 'none',
   width: props.type === 'block' ? '100%' : 'auto',
   position: 'absolute',
   bottom: '0',
   right: '0',
-  transform: 'translate(-40%,-90%)'
+  transform: 'translate(-4vh,-2vh)'
 }));
 
 export {SCard, SCardImage, SCardLogo, SCardButton};

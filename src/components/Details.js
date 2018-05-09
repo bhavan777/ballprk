@@ -13,7 +13,7 @@ class Details extends Component {
         <Card data={Data.banner} />
         <Space ptS={50} scollable maxHeight='60vh'>
           <Row>
-            <Col TAlign='center' l={8} offsetL={2}>
+            <Col TAlign='center' s={10} offsetS={1}>
               <Space mbS={25}>
                 <Text variant='h4' clr-variant='dark1' weight='sbd'>NFL Canada</Text>
                 <Text variant='h5' clr-variant='light2' weight='rg'> Canada </Text>

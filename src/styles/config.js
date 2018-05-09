@@ -7,13 +7,20 @@ const Config = {
   },
   gridSize: 12,
   fontSizes: {
-    h1: '3rem',
-    h2: '2.5rem',
-    h3: '2rem',
-    h4: '1.5rem',
-    h5: '1.15rem',
+    h1: '2.48rem',
+    h2: '2.0736rem',
+    h3: '1.728rem',
+    h4: '1.44rem',
+    h5: '1.2rem',
     h6: '1rem',
-    small: '0.75rem'
+    small: '0.833rem'
+  },
+  radii: {
+    sm: 2,
+    rg: 3,
+    lg: 5,
+    xl: 10,
+    circle: '50%'
   },
   fontWeights: {
     lt: 200,
@@ -22,6 +29,8 @@ const Config = {
     bd: 600
   },
   colors: {
+    primary: '#3B3434',
+    secondary: '#954039',
     text: {
       dark3: '#222',
       dark2: '#333',
@@ -31,11 +40,15 @@ const Config = {
       light1: '#999',
       light2: '#aaa',
       light3: '#ccc',
+      white: '#ffffff',
       link: '#1173B9',
       linkHover: '#117399'
     },
     bg: {
       white: '#ffffff',
+      light1: '#fafafa',
+      light2: '#eeeeee',
+      light3: '#dddddd',
       transparent: 'transparent'
     },
     border: {

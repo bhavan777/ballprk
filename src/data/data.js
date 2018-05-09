@@ -20,7 +20,7 @@ const Data = {
     },
     {
       bannerImg: 'Jamaal-Westerman.jpeg',
-      bannerLogo: 'Jamaal-Westerman-circle.png',
+      bannerLogo: 'Jamaal-Westerman-circle.jpeg',
       name: 'Jamaal Westerman',
       position: 'Football, Defensive Lineman',
       club: 'Montreal Alouettes'
@@ -55,7 +55,7 @@ const Data = {
     },
     {
       bannerImg: 'Jamaal-Westerman.jpeg',
-      bannerLogo: 'Jamaal-Westerman-circle.png',
+      bannerLogo: 'Jamaal-Westerman-circle.jpeg',
       name: 'Jamaal Westerman',
       position: 'Football, Defensive Lineman',
       club: 'Montreal Alouettes'
@@ -90,7 +90,7 @@ const Data = {
     },
     {
       bannerImg: 'Jamaal-Westerman.jpeg',
-      bannerLogo: 'Jamaal-Westerman-circle.png',
+      bannerLogo: 'Jamaal-Westerman-circle.jpeg',
       name: 'Jamaal Westerman',
       position: 'Football, Defensive Lineman',
       club: 'Montreal Alouettes'
