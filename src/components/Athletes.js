@@ -3,15 +3,14 @@ import {Input, InputWrapper} from '../styles/form';
 import {Space} from '../styles/helpers';
 import {Row} from '../styles/grid';
 import Card from '../components/sub-components/card';
-import Data from '../data/data';
 class Athletes extends Component {
   constructor (props) {
     super(props);
     this.state = {
-      Athletes: Data.Athletes,
+      Athletes: this.props.data,
       inputIsFocused: false
     };
-    this.data = Data;
+    this.data = this.props.data;
     this.handleChange = this.handleChange.bind(this);
     this.getCard = this.getCard.bind(this);
     this.handleInputFocus = this.handleInputFocus.bind(this);
@@ -23,9 +22,18 @@ class Athletes extends Component {
 
   handleChange (event) {
     let key = event.target.value;
-    let reg = new RegExp(key, 'i');
-    let updatedAthletes = this.data.Athletes.filter((athlete) => (reg.test(athlete.name) || reg.test(athlete.club)) || reg.test(athlete.position));
-    this.setState({Athletes: updatedAthletes});
+    let isValidString = true;
+    try {
+      new RegExp(key, 'i');
+    } catch (e) {
+      isValidString = false;
+    }
+    if (isValidString) {
+      let reg = new RegExp(key, 'i');
+      let updatedAthletes = this.data.filter((athlete) => (reg.test(athlete.name) || reg.test(athlete.club)) || reg.test(athlete.position));
+      this.setState({Athletes: updatedAthletes});
+    } else {     
+    }
   }
 
   handleInputFocus (event) {
@@ -41,10 +49,10 @@ class Athletes extends Component {
         <Space mtS={15}>
           <InputWrapper hasIcon focused={this.state.inputIsFocused}>
             <i className='fa fa-search fa-2x' />
-            <Input type='text' onKeyUp={this.handleChange} onFocus={this.handleInputFocus} onBlur={this.handleInputBlur} placeholder='Search for Athletes' />
+            <Input type='text' isFocused={this.state.inputIsFocused} onKeyUp={this.handleChange} onFocus={this.handleInputFocus} onBlur={this.handleInputBlur} placeholder='Search for Athletes' />
           </InputWrapper>
         </Space>
-        <Space mtS={15} scollable maxHeight='calc( 100vh - 250px )'>
+        <Space mtS={15} scollable sSrollable maxHeight='calc( 100vh - 250px )'>
           <Row>
             {
             this.state.Athletes.map((athlete, ind) => {

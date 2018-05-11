@@ -3,23 +3,13 @@ import {NavWrapper, NavListItem} from '../../styles/nav';
 class Nav extends Component {
   render () {
     return (
-        <NavWrapper>
-          <NavListItem>
-            <a>Posts</a>
+      <NavWrapper>
+        {this.props.data.map((item) => (
+          <NavListItem isActive={item.active}>
+            <a href={item.href}>{item.label}</a>
           </NavListItem>
-          <NavListItem isActive>
-            <a>our athletes</a>
-          </NavListItem>
-          <NavListItem>
-            <a>photos</a>
-          </NavListItem>
-          <NavListItem>
-            <a>videos</a>
-          </NavListItem>
-          <NavListItem>
-            <a>Events</a>
-          </NavListItem>
-        </NavWrapper>
+        ))}
+      </NavWrapper>
     );
   }
 }

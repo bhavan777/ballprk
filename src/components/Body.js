@@ -8,10 +8,10 @@ class Body extends Component {
   render () {
     return (
       <BodyWrapper>
-        <Nav />
-        <Space plS={20} prS={20} ptS={15}>
-          <NavActions />
-          <Athletes />
+        <Nav data={this.props.data.secondaryNav} />
+        <Space plS={10} prS={10} ptS={15} plM={20} prM={20} ptM={15}>
+          <NavActions data={this.props.data.NavActions} />
+          <Athletes data={this.props.data.Athletes} />
         </Space>
       </BodyWrapper>
     );

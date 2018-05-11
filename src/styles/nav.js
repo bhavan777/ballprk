@@ -12,11 +12,16 @@ const NavWrapper = glamorous.ul((props) => ({
   boxShadow: Config.shadows.lightBottomShadow,
   ' li': {
     display: 'inline-block',
-    margin: '0 20px',
     textTransform: 'uppercase',
     padding: '0 5px',
     cursor: 'pointer',
     transition: 'color 0.3s linear',
+    [Config.media.phone]: {
+      margin: '0 5px'
+    },
+    [Config.media.tab]: {
+      margin: '0 20px'
+    },
     ':hover': {
       transition: 'color 0.3s linear',
       color: Config.colors.text.dark2

@@ -5,7 +5,14 @@ const DetailsWrapper =glamorous.div({
   backgroundColor: '#FAFAFA',
   height: 'calc( 100vh - 50px )',
   overflow: 'hidden',
-  boxShadow: Config.shadows.light
+  boxShadow: Config.shadows.light,
+  [Config.media.phone]: {
+    height: 'auto'
+  },
+  [Config.media.tab]: {
+    height: 'calc( 100vh - 50px )'
+  }
+
 });
 
 const BodyWrapper = glamorous.div({

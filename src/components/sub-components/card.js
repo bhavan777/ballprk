@@ -19,10 +19,10 @@ class Card extends Component {
                   <Text variant='small' clr-variant='light3' weight='lt'> {data.club}</Text>
                 </Space>
               </Col>
-              <Col withPadding TAlign='center' l={5} offsetL={1}>
+              <Col withPadding TAlign='center' s={5} offsetS={1}>
                 <Button type='block' bg='primary'>Message</Button>
               </Col>
-              <Col withPadding TAlign='center' l={5}>
+              <Col withPadding TAlign='center' s={5}>
                 <Button type='block' bg='secondary'>Book Session</Button>
               </Col>
             </Row>
@@ -37,7 +37,7 @@ class Card extends Component {
       <SCard variant={this.props.variant}>
         <Row relative>
           <Col>
-            <SCardImage bg={`${process.env.PUBLIC_URL}/${this.props.data.bannerImg}`} />
+            <SCardImage variant={this.props.variant} bg={`${process.env.PUBLIC_URL}/${this.props.data.bannerImg}`} />
             <SCardLogo variant={this.props.variant} bg={`${process.env.PUBLIC_URL}/${this.props.data.bannerLogo}`} />
             <SCardButton variant='medium' pull='right'>Follow</SCardButton>
           </Col>

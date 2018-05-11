@@ -13,10 +13,16 @@ const SCard = glamorous.div((props) => ({
   ':nth-child(3n)': {
     marginRight: 0
   },
+  [Config.media.phone]: {
+    width: '100%'
+  },
+  [Config.media.tab]: {
+    width: props.variant === 'smallCard' ? '32%' : '100%'
+  }
 }));
 
 const SCardImage = glamorous.div((props) => ({
-  minHeight: '25vh',
+  minHeight: props.variant === 'smallCard' ? '25vh' : '34vh',
   backgroundImage: `url(${props.bg})`,
   backgroundRepeat: 'no-repeat',
   backgroundSize: 'cover',
