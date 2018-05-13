@@ -8,7 +8,7 @@ class SignupPage extends Component {
   render () {
     return (
       <div>
-        <Header data={Data} />
+        <Header data={Data} variant='gradient' />
         <Signup data={Data} />
       </div>
     );

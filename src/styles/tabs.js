@@ -33,6 +33,8 @@ const Tab = glamorous.div({
     lineHeight: '50px',
     cursor: 'pointer',
     textAlign: 'center',
+    top: 0,
+    left: 0,
     fontWeight: Config.fontWeights.lt,
     background: Config.colors.bg.white,
     transition: 'all 0.2s linear'

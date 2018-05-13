@@ -10,10 +10,10 @@ class SignupForm extends Component {
       <FormWrapper>
         <Space ptL={30}>
           <Row>
-            <Col s={6} offsetS={3} TAlign='center'>
+            <Col s={10} offsetS={1} m={6} offsetM={3} TAlign='center'>
               <FormHeading>Let's get started</FormHeading>
               <FormTagline> We saw you across the room, we don't <br/>usually do this, but...</FormTagline>
-              <Space mtL={30}>
+              <Space mtS={30}>
                 <Button type='block' bg='primary-gradient' hasIcon>
                   <ChevronIcon direction='left' color='white' className='stick-left' />
                   Prep School
@@ -22,7 +22,7 @@ class SignupForm extends Component {
             </Col>
           </Row>
           <Row>
-            <Col s={6} offsetS={3}>
+            <Col s={10} offsetS={1} m={6} offsetM={3} TAlign='center'>
               <Space mtS={40}>
                 <form>
                   {

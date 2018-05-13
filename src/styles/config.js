@@ -54,6 +54,8 @@ const Config = {
       light1: '#fafafa',
       light2: '#eeeeee',
       light3: '#dddddd',
+      dark: '#292929',
+      dark1: '#222222',
       transparent: 'transparent',
       teal: '#395961',
       lightBlue: '#434647'

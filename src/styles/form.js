@@ -104,7 +104,9 @@ const InputLabel = glamorous.label({
   fontSize: Config.fontSizes.small,
   fontWeight: Config.fontWeights.bd,
   textTransform: 'capitalize',
-  lineHeight: 2
+  lineHeight: 2,
+  textAlign: 'left',
+  display: 'block'
 });
 
 export {Button, Input, SearchWrapper, FormWrapper, FormHeading, FormTagline, InputWrapper, InputLabel};

@@ -78,15 +78,15 @@ const Space = glamorous.div(
 const MediaSpecificElement = glamorous.div((props) => ({
   [Config.media.phone]: {
     lineHeight: 0,
-    display: props.hideS === true ? 'none' : (props.type === 'inline') ? 'inline' : 'inline-block'
+    display: props.hideS === true ? 'none' : (props.type === 'inline') ? 'inline' : 'block'
   },
   [Config.media.tab]: {
     lineHeight: 0,
-    display: props.hideM === true ? 'none' : (props.type === 'inline') ? 'inline' : 'inline-block'
+    display: props.hideM === true ? 'none' : (props.type === 'inline') ? 'inline' : 'block'
   },
   [Config.media.screen]: {
     lineHeight: 0,
-    display: props.hideL === true ? 'none' : (props.type === 'inline') ? 'inline' : 'inline-block'
+    display: props.hideL === true ? 'none' : (props.type === 'inline') ? 'inline' : 'block'
   }
 }));
 

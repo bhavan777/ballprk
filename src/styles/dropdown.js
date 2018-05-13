@@ -48,8 +48,13 @@ const DropDownList = glamorous.ul((props) => ({
   boxShadow: Config.shadows.inputShadow,
   transition: 'all 0.1s linear',
   opacity: props.isOpen === true ? 1 : 0,
+  [Config.media.phone]: {
+    maxHeight: props.isOpen === true ? 100 : 0,
+    top: (props.hasLabel === undefined) ? 50 : 70
+  },
   ' li': {
     paddingLeft: 15,
+    textAlign: 'left',
     cursor: 'pointer',
     boxShadow: Config.shadows.lightBottomShadow,
     color: Config.colors.text.dark1,

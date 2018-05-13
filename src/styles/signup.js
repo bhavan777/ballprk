@@ -1,4 +1,5 @@
 import glamorous from 'glamorous';
+import { Config } from '../styles/config';
 
 const FeatureBg = glamorous.div({
   backgroundImage: `url(${process.env.PUBLIC_URL}/msd.jpg)`,

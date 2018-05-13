@@ -2,7 +2,6 @@ import glamorous from 'glamorous';
 import {Config} from '../styles/config';
 
 const BHeader = glamorous.header({
-  backgroundColor: '#222',
   color: 'white',
   width: '100%',
   '::after': {
@@ -24,7 +23,10 @@ const BHeader = glamorous.header({
     position: 'static',
     height: 50
   }
-});
+},
+(props) => ({
+  background: props.variant === 'gradient' ? `linear-gradient(left,${Config.colors.bg.dark1} 0%,${Config.colors.bg.dark} 100%)` : Config.colors.bg.dark
+}));
 
 const Logo = glamorous.div((props) => ({
   width: 150,

@@ -19,7 +19,7 @@ class Header extends Component {
   }
   render () {
     return (
-      <BHeader>
+      <BHeader variant={this.props.variant}>
         <Row type={this.props.container ? 'container' : ''}>
           <Col s={12} m={6} TAlign='center' >
             <Row>
