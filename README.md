@@ -5,7 +5,9 @@ Stack:
 
 
   React for UI
+
   Glamorous for CSS in JS
+
   react router for routing two pages
 ##
 all the files in the src folder are hand written.
