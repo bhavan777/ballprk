@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Input, InputWrapper} from '../styles/form';
+import {Input, SearchWrapper} from '../styles/form';
 import {Space} from '../styles/helpers';
 import {Row} from '../styles/grid';
 import Card from '../components/sub-components/card';
@@ -47,10 +47,10 @@ class Athletes extends Component {
     return (
       <div>
         <Space mtS={15}>
-          <InputWrapper hasIcon focused={this.state.inputIsFocused}>
+          <SearchWrapper hasIcon focused={this.state.inputIsFocused}>
             <i className='fa fa-search fa-2x' />
-            <Input type='text' isFocused={this.state.inputIsFocused} onKeyUp={this.handleChange} onFocus={this.handleInputFocus} onBlur={this.handleInputBlur} placeholder='Search for Athletes' />
-          </InputWrapper>
+            <Input type='text' hasIcon isFocused={this.state.inputIsFocused} onKeyUp={this.handleChange} onFocus={this.handleInputFocus} onBlur={this.handleInputBlur} placeholder='Search for Athletes' />
+          </SearchWrapper>
         </Space>
         <Space mtS={15} scollable sSrollable maxHeight='calc( 100vh - 250px )'>
           <Row>

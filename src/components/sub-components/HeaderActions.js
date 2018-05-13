@@ -5,36 +5,50 @@ import {MediaSpecificElement} from '../../styles/helpers';
 
 class HeaderActions extends Component {
   render () {
+    const getTextLink = (action) => (
+      <a href={action.href} className={action.active ? 'active' : ''}>{action.label}</a>
+    );
+
+    const getIcon = (action) => (
+      <span>
+        <i className={action.icon.classes} />
+        <MediaSpecificElement type='inline' hideM hideL>barcode</MediaSpecificElement>
+      </span>
+    );
+
+    const getSeparator = (action) => (
+      <MediaSpecificElement hideS>
+        <VerticalSeparator />
+      </MediaSpecificElement>
+    );
+
+    const getUser = (action) => (
+      <MediaSpecificElement hideS>
+        <UserIcon />
+      </MediaSpecificElement>
+    );
     return (
       <HeaderList isOpen={this.props.isOpen}>
-        <li>
-          <a>NewsFeed</a>
-        </li>
-        <li>
-          <a className='active'>Explore</a>
-        </li>
-        <li>
-          <i className='fas fa-barcode' />
-          <MediaSpecificElement type='inline' hideM hideL>barcode</MediaSpecificElement>
-        </li>
-        <li>
-          <MediaSpecificElement hideS>
-            <VerticalSeparator />
-          </MediaSpecificElement>
-        </li>
-        <li>
-          <i className='fa fa-hdd' />
-          <MediaSpecificElement type='inline' hideM hideL>Actions</MediaSpecificElement>
-        </li>
-        <li>
-          <i className='fa fa-bell' />
-          <MediaSpecificElement type='inline' hideM hideL>Notifications</MediaSpecificElement>
-        </li>
-        <li>
-          <MediaSpecificElement hideS>
-            <UserIcon />
-          </MediaSpecificElement>
-        </li>
+        {this.props.data.map((action, ind) => {
+          let elem = '';
+          switch (action.type) {
+            case 'textLink' :
+              elem = getTextLink(action);
+              break;
+            case 'icon' :
+              elem = getIcon(action);
+              break;
+            case 'separator' :
+              elem = getSeparator();
+              break;
+            default:
+              elem = getUser();
+              break;
+          }
+          return (<li key={ind} >{elem}</li>);
+        }
+      )
+      }
       </HeaderList>
     );
   }

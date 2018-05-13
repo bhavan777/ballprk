@@ -1,6 +1,5 @@
 const Config = {
-  media:
-  {
+  media: {
     phone: '@media only screen and (min-width: 320px)',
     tab: '@media only screen and (min-width: 768px)',
     screen: '@media only screen and (min-width: 1024px)'
@@ -14,6 +13,10 @@ const Config = {
     h5: '1.2rem',
     h6: '1rem',
     small: '0.833rem'
+  },
+  fonts: {
+    sourceSans: `'Source Sans Pro', sans-serif`,
+    oswald: `'Oswald', sans-serif`
   },
   radii: {
     sm: 2,
@@ -42,14 +45,18 @@ const Config = {
       light3: '#ccc',
       white: '#ffffff',
       link: '#1173B9',
-      linkHover: '#117399'
+      linkHover: '#117399',
+      teal: '#395961',
+      lightBlue: '#434647'
     },
     bg: {
       white: '#ffffff',
       light1: '#fafafa',
       light2: '#eeeeee',
       light3: '#dddddd',
-      transparent: 'transparent'
+      transparent: 'transparent',
+      teal: '#395961',
+      lightBlue: '#434647'
     },
     border: {
       dark2: '#999',
@@ -57,12 +64,17 @@ const Config = {
       dark: '#bbb',
       light: '#ccc',
       light1: '#ddd',
-      light2: '#eee'
+      light2: '#eee',
+      teal: '#395961',
+      lightBlue: '#434647',
+      transparent: 'transparent',
+      white: '#ffffff'
     }
   },
   shadows: {
     light: '0px 1px 3px 0px rgba(0,0,0,0.2)',
-    lightBottomShadow: '0px 1px 1px 0px rgba(0,0,0,0.1)'
+    lightBottomShadow: '0px 1px 1px 0px rgba(0,0,0,0.1)',
+    inputShadow: '1px 1px 3px 1px rgba(58,89,96,0.3),-1px 1px 3px 1px rgba(58,89,96,0.3)'
   }
 };
 

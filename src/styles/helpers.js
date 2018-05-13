@@ -45,7 +45,7 @@ const Space = glamorous.div(
         paddingRight: (props.prS) ? props.prS : 0,
         paddingTop: (props.ptS) ? props.ptS : 0,
         paddingBottom: (props.pbS) ? props.pbS : 0,
-        maxHeight: (props.sSrollable) ? (props.maxHeight || 'auto') : 'initial',
+        maxHeight: (props.sSrollable) ? (props.maxHeight || 'none') : 'initial',
         overflow: (props.sSrollable) ? 'scroll' : 'initial'
       },
       [Config.media.tab]: {
@@ -57,8 +57,8 @@ const Space = glamorous.div(
         paddingRight: (props.prM) ? props.prM : 0,
         paddingTop: (props.ptM) ? props.ptM : 0,
         paddingBottom: (props.pbM) ? props.pbM : 0,
-        maxHeight: props.maxHeight || 'auto',
-        overflow: props.scollable ? 'scroll' : 'auto'
+        maxHeight: props.maxHeight || 'none',
+        overflow: props.scollable ? 'scroll' : 'initial'
       },
       [Config.media.screen]: {
         marginLeft: (props.mlL) ? props.mlL : 0,
@@ -69,8 +69,8 @@ const Space = glamorous.div(
         paddingRight: (props.prL) ? props.prL : 0,
         paddingTop: (props.ptL) ? props.ptL : 0,
         paddingBottom: (props.pbL) ? props.pbL : 0,
-        maxHeight: props.maxHeight || 'auto',
-        overflow: props.scollable ? 'scroll' : 'auto'
+        maxHeight: props.maxHeight || 'none',
+        overflow: props.scollable ? 'scroll' : 'initial'
       }
     });
   });

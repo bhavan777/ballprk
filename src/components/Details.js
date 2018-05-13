@@ -20,9 +20,9 @@ class Details extends Component {
               </Space>
               <Row>
                 {
-                  this.props.data.Details.stats.map((stat) => {
+                  this.props.data.Details.stats.map((stat, ind) => {
                     return (
-                      <Col TAlign='center' s={4}>
+                      <Col TAlign='center' s={4} key={ind}>
                         <Text variant='h4' clr-variant='dark' weight='sbd'>{stat.count}</Text>
                         <Text variant='h5' clr-variant='light' weight='sbd'>{stat.label}</Text>
                       </Col>
@@ -49,8 +49,8 @@ class Details extends Component {
                     <Row>
                       <Col TAlign='center'>
                         {
-                          this.props.data.Details.Partners.companies.map((company) => (
-                            <Partner data={company} />
+                          this.props.data.Details.Partners.companies.map((company, ind) => (
+                            <Partner data={company} key={ind} />
                           ))
                         }
                       </Col>

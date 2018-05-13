@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import './App.css';
 import Header from './components/sub-components/header';
-import Explore from './components/explore';
+import Signup from './components/signup';
+import Data from './data/signupPage';
+
 class SignupPage extends Component {
   render () {
     return (
       <div>
-        <Header container={true} />
-        <Explore container={true} />
+        <Header data={Data} />
+        <Signup data={Data} />
       </div>
     );
   }

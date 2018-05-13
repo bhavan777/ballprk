@@ -15,7 +15,7 @@ const BHeader = glamorous.header({
     top: 0,
     left: 0,
     zIndex: 1,
-    height: 50
+    minHeight: 50
   },
   [Config.media.tab]: {
     position: 'static'
@@ -47,9 +47,9 @@ const HeaderList = glamorous.ul((props) => ({
   fontFamily: `'Oswald', sans-serif`,
   listStyle: 'none',
   color: '#aaa',
-  fontWeight: 300,
   letterSpacing: 1.5,
-  fontSize: '1.15rem',
+  fontSize: Config.fontSizes.h6,
+  fontWeight: Config.fontWeights.lt,
   marginRight: 15,
   ' li': {
     float: 'left',

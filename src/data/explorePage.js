@@ -215,6 +215,44 @@ const Data = {
       },
       pull: 'right'
     }
+  ],
+  header: [
+    {
+      type: 'textLink',
+      label: 'Newsfeed'
+    },
+    {
+      type: 'textLink',
+      label: 'Explore',
+      active: true
+    },
+    {
+      type: 'icon',
+      label: 'barcode',
+      icon: {
+        classes: 'fas fa-barcode'
+      }
+    },
+    {
+      type: 'separator'
+    },
+    {
+      type: 'icon',
+      label: 'actions',
+      icon: {
+        classes: 'fa fa-hdd'
+      }
+    },
+    {
+      type: 'icon',
+      label: 'notifications',
+      icon: {
+        classes: 'fa fa-bell'
+      }
+    },
+    {
+      type: 'user'
+    }
   ]
 };
 

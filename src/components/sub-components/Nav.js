@@ -4,8 +4,8 @@ class Nav extends Component {
   render () {
     return (
       <NavWrapper>
-        {this.props.data.map((item) => (
-          <NavListItem isActive={item.active}>
+        {this.props.data.map((item, ind) => (
+          <NavListItem isActive={item.active} key={ind}>
             <a href={item.href}>{item.label}</a>
           </NavListItem>
         ))}

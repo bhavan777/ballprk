@@ -6,7 +6,7 @@ const NavWrapper = glamorous.ul((props) => ({
   backgroundColor: '#fefefe',
   margin: '0 auto',
   textAlign: 'center',
-  fontFamily: `'Oswald', sans-serif`,
+  fontFamily: Config.fonts.oswald,
   fontSize: Config.fontSizes.h5,
   lineHeight: '40px',
   boxShadow: Config.shadows.lightBottomShadow,

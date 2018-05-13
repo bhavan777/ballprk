@@ -41,7 +41,7 @@ class Header extends Component {
             </Row>
           </Col>
           <Col s={12} m={6}>
-            <HeaderActions isOpen={this.state.isMenuOpen} />
+            <HeaderActions data={this.props.data.header} isOpen={this.state.isMenuOpen} />
           </Col>
         </Row>
       </BHeader>
